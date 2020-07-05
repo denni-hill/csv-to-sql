@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="description">
+    <h1>Instruction</h1>
+    <p>This converter converts .csv files with "," or ";" -splitter to a part of SQL query next format:<br>
+<pre>
+(column1, column2, ..., columnk) VALUES
+(value1, value2, ..., valuek),
+(value1, value2, ..., valuek),
+(value1, value2, ..., valuek),
+...</pre>
+    So input data should be next format:
+<pre>
+column1,column2,...,columnk
+value1,value2,...,valuek
+value1,value2,...,valuek
+value1,value2,...,valuek
+...</pre>
+    or:
+<pre>
+column1;column2;...;columnk
+value1;value2;...;valuek
+value1;value2;...;valuek
+value1;value2;...;valuek
+...</pre>
+    The main advantage of this script is that it gives you ready sql query part to load it to db. It is simple:
+    <pre>
+"INSERT INTO table" + csv_to_sql(input)</pre>
+    Also this script can convert values, which are contains ",".<br>
+    To add this feature to your project simply copy csv_to_sql function from JS block.
+    </p>
+</div>
+    <h1>Separator</h1>
+    <div id="separators_wrapper">
+        <input type="radio" name="separator" value="," id="coma_separator" checked/>
+        <label for="coma_separator">Coma (,)</label>
+        <input type="radio" name="separator" value=";" id="semicolon_separator"/>
+        <label for="semicolon_separator">Semicolon (;)</label>
+    </div>
+    <h1>Input</h1>
+    <textarea id="input"></textarea>
+    <div id="convert_button_wrapper"><div id="convert_button">Convert</div></div>
+    <textarea id="output"></textarea>
+    <h1>Output</h1>
+    <script src="main.js"></script>
+</body>
+</html>

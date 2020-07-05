@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+body
+{
+  font-family: roboto;
+}
+
+#input, #output
+{
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+    height: 200px;
+}
+
+#convert_button_wrapper
+{
+    text-align: center;
+}
+
+#convert_button
+{
+    display: inline-block;
+    padding: 5px 10px;
+    border: solid 1px black;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+pre
+{
+    margin: 5px 0px 5px 5px;
+    padding: 5px;
+    border: solid 1px black;
+    display: block;
+    width: fit-content;
+}
+
+body
+{
+    width: 80%;
+    margin: 0px auto;
+}
+
+h1
+{
+    text-align: center;
+}
+
+label
+{
+    font-size: large;
+}
+
+label[for=coma_separator]
+{
+    margin-right: 20px;
+}
+
+#separators_wrapper
+{
+    text-align: center;
+    margin: 10px 0px;
+}
